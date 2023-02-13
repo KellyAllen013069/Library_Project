@@ -3,46 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
     <title>Library Project</title>
   </head>
-  <body>
+  <body style="background-image: url(lib2.jpeg); background-repeat: no-repeat ; background-size:cover">
     <main
       style="
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        color: white;
+       
       "
     >
       <div>
         <h1>Library Project</h1>
-        <div id="library">
+       </div> 
           <!-- Add table here -->
-          <table id="table" style="min-width: 680px; margin: 2rem">
-            <thead>
+        <div>
+            <table id="inputTable">
+              <form>
               <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Read</th>
+                <td><label for="title">Title:</label></td>
+                <td><input id="title" type="text"/></td>
               </tr>
-            </thead>
-            <tbody>
               <tr>
-                <td>Name of the Wind</td>
-                <td>Patrick Rothfuss</td>
-                <td>
-                  <input
-                    type="checkbox"
-                    name="read"
-                    id="readLibraryCheckbox"
-                    checked
-                    disabled
-                  />
-                </td>
+                <td><label for="author">Author:</label></td>
+                <td><input id="author" type="text"/></td>
               </tr>
-            </tbody>
-          </table>
+              <tr>
+                <td colspan="2"><input id="read" type="checkbox"/><label for="read">Read</label>
+          
+              </tr>
+              <tr>
+                <td colspan="2"><button type="submit" id="subBtn">Add Book</button></td>
+              </tr>
+              </form>
+            </table>
         </div>
+         <div>
+            <table id="table" style="min-width: 680px; margin: 2rem">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Read</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                
+              </tbody>
+            </table>
+          </div> 
+         <!--  <div><button id="show-me">Show me current books</button></div> -->
+       
     </main>
 
     <script src="app.js"></script>
